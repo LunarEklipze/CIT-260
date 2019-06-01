@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- External Style -->
+    <link rel="stylesheet" type="text/css" href="external.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Record</title>
+</head>
+
+<body>
+
+<div class="container">
+    <form action="/action_page.php">
+        <div class="row">
+            <div class="col-25">
+                <label for="date">Date</label>
+            </div>
+            <div class="col-75">
+                <input type="text" id="fdate" name="dreamDate" placeholder="Date">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-25">
+                <label for="description">Dream Description</label>
+            </div>
+            <div class="col-75">
+                <textarea id="description" name="dreamDescription" placeholder="Write your dream here..." style="height:200px"></textarea>
+            </div>
+        </div>
+
+        <div class="row">
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+</div>
+
+</body>
+</html>
