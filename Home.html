@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- External Style -->
+    <link rel="stylesheet" type="text/css" href="external.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dream Log</title>
+</head>
+
+<body>
+    <h1>Dream Log</h1>
+    <!----------------------------------------------------------------------------------->
+    <!--I originally wanted to have this section be it's own page but doing so made the local storage not work.
+    I spent a few hours trying to get the code to work properly but it wasn't having it. I am thinking it has something to
+    do with the submit form. Every time I called the saveDreams function it would overwrite what was already in
+    the array rather than add to it. I could not get the hardcoded information to stay with the new information
+    so I decided to keep it all in the same html page-->
+    <div class="container">
+            <form>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="date">Date</label>
+                    </div>
+                    <div class="col-75">
+                        <!--A date input box that requires a date in order for the form to submit-->
+                        <input type="date" id="fdate" name="dreamDate" placeholder="Date" required>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-25">
+                        <label for="description">Dream Description</label>
+                    </div>
+                    <div class="col-75">
+                        <!--A text area input box that requires text in order for the form to submit-->
+                        <textarea id="description" name="dreamDescription" placeholder="Write your dream here..." style="height:200px" required></textarea>
+                    </div>
+                </div>
+                <div>
+                    <input type="submit" value="Submit">
+                </div>
+            </form>
+        </div>
+    <!------------------------------------------------------------------------------------>
+
+    <div id="bulk">
+        <button class="button" onclick="callDreams()">See all Dreams</button>
+        <p id="list"></p> <br>
+    </div>
+
+<script src="dreamLog.js"></script>
+</body>
+</html>
